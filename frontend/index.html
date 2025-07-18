@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Brand / Title -->
+  <div class="title-header">
+    <h1 class="main-title">Ezygo</h1>
+    <p class="subtitle">Sign in to your student account</p>
+  </div>
+
   <div class="login-container">
-    
+
     <!-- Login Form -->
     <form id="loginForm">
-      <h2>Log in<br><span>to EasyGo+</span></h2>
+      <h2>Log in<br><span>to Ezygo+</span><br></h2>
 
-      <label for="login-handle">Twitter handle</label>
-      <input type="text" id="login-handle" placeholder="@yourhandle" required>
+      <label for="login-handle">Email ID</label>
+      <input type="text" id="login-handle" required>
 
       <label for="login-password">Password</label>
       <input type="password" id="login-password" required>
@@ -31,20 +38,33 @@
     <form id="signupForm" style="display: none;">
       <h2>Sign up<br><span>for EasyGo+</span></h2>
 
-      <label for="signup-handle">Twitter handle</label>
-      <input type="text" id="signup-handle" placeholder="@yourhandle" required>
-
-      <label for="signup-email">Email</label>
-      <input type="email" id="signup-email" placeholder="you@example.com" required>
-
+      <label for="signup-email">Email ID</label>
+      <input
+        type="email"
+        id="signup-email"
+        required
+        oninput="validateCustomEmail(this)"
+        placeholder="you@example.com"
+      />
+      <span id="emailError" style="color: #FF4D4D; font-size: 13px; display: none;">
+        Invalid email format. Only @gmail.com, @ktu.com, @ezygo.com are allowed.
+      </span>
       <label for="signup-password">Password</label>
       <input type="password" id="signup-password" required>
+
+      <label for="signup-confirm-password">Confirm Password</label>
+      <input type="password" id="signup-confirm-password" required>
 
       <button type="submit">Sign up</button>
       <p class="toggle-msg">Already have an account? <a href="#" onclick="toggleForm()">Log in here</a></p>
     </form>
 
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Upgraded Ezygo Dashboard</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
