@@ -111,6 +111,16 @@ input:focus {
   text-decoration: none;
 }
 
+a,
+a:visited {
+  color:#2da4db;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 .links a:hover,
 .signup a:hover {
   text-decoration: underline;
@@ -171,4 +181,13 @@ button:active {
   button {
     font-size: 15px;
   }
+}
+
+.links a,
+.signup a,
+.links a:visited,
+.signup a:visited {
+  color: #2da4db;
+  text-decoration: none;
+
 }
