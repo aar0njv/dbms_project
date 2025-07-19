@@ -19,44 +19,70 @@
         <option value="90">90%</option>
       </select>
 
-      <span class="college-label">Govt. Model Engineering College</span>
+      <span id="college-name-display" class="college-label">Govt. Model Engineering College</span>
 
-      <img src="profile.png" alt="profile" class="profile-icon" />
+      <div class="profile-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+      <button id="logout-button" class="dashboard-button">Logout</button>
     </div>
   </div>
 
   <!-- Dashboard Content -->
   <header class="dashboard-header">
-    <h1>Welcome to EzyGo+</h1>
+    <h1 id="welcome-message">Welcome to EzyGo+</h1>
     <p>Your smart attendance tracking system for modern educational institutions</p>
   </header>
 
   <main class="dashboard-main">
-    <div class="attendance-summary">
-      <div><strong>4</strong><br>Total Classes</div>
-      <div><strong>2</strong><br>Present</div>
-      <div><strong>1</strong><br>Absent</div>
-      <div><strong>75%</strong><br>Attendance Rate</div>
+    <div class="section-card attendance-summary">
+      <div><strong id="total-classes-display">0</strong><br>Total Classes</div>
+      <div><strong id="present-classes-display">0</strong><br>Present</div>
+      <div><strong id="absent-classes-display">0</strong><br>Absent</div>
+      <div><strong id="overall-attendance-rate">0%</strong><br>Attendance Rate</div>
     </div>
 
-    <section class="reminder">
-      <h2>Quick Actions</h2>
-      <p>Common tasks for attendance management</p>
-      <button>Mark Attendance</button>
-      <button>View Students</button>
-      <button>Generate Report</button>
+    <section class="section-card">
+      <h2>Today's Timetable</h2>
+      <div id="timetable-display" class="timetable-grid">
+        <p style="color: #ccc;">No classes scheduled for today or timetable not loaded.</p>
+      </div>
     </section>
+
+    <section class="section-card">
+      <h2>Subject-wise Attendance</h2>
+      <div id="subject-attendance-display" class="subject-attendance-grid">
+        <p style="color: #ccc;">No subject attendance data available.</p>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <h2>Daily Attendance Updation (<span id="today-date-display"></span>)</h2>
+      <div id="attendance-updation-list" class="attendance-updation-list">
+        <p style="color: #ccc;">No classes to mark attendance for today.</p>
+      </div>
+      <div class="attendance-updation-controls">
+        <button id="mark-attendance-button" class="dashboard-button">Mark Attendance for Today</button>
+        <button id="clear-attendance-button" class="dashboard-button red-button">Clear Today's Selection</button>
+      </div>
+      <div id="updation-message" class="attendance-message hidden"></div>
+    </section>
+
+    <section class="section-card">
+      <h2>Monthly Attendance Trends</h2>
+      <div id="monthly-trend-display" class="monthly-trend-content">
+        <p>Analyzing attendance for <span id="current-month-year"></span>:</p>
+        <p>Most Attended Subject: <span id="most-attended-subject">N/A</span></p>
+        <p>Least Attended Subject: <span id="least-attended-subject">N/A</span></p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="dashboard-footer">
     <p>© 2025 EzyGo+ Dashboard</p>
   </footer>
 
-  <script>
-    document.getElementById("attendance-threshold").addEventListener("change", function () {
-      const value = this.value;
-      console.log("Threshold set to:", value);
-    });
-  </script>
+  <script src="dashboard_script.js"></script>
 </body>
 </html>

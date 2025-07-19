@@ -6,7 +6,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #3a3a3a; /* Light gray background */
+  background-color: #3a3a3a; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 
-/* Title & Subtitle above form */
+
 .title-header {
   text-align: center;
   color: white;
@@ -35,7 +35,7 @@ body {
   margin: 6px auto 0;
   width: 40px;
   height: 3px;
-  background-color: #FF9900; /* Amazon orange underline */
+  background-color: #FF9900; 
   border-radius: 2px;
 }
 
@@ -45,16 +45,16 @@ body {
   color: white;
 }
 
-/* Login/Signup Box */
+
 .login-container {
-  background-color: #2e2e2e; /* Darker gray */
+  background-color: #2e2e2e;
   padding: 50px 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 450px;
-  height: 530px;
-  color: white; /* Text inside form */
+  height: 530px; 
+  color: white;
 }
 
 .login-container h2 {
@@ -87,8 +87,8 @@ input[type="email"] {
   margin-top: 5px;
   border: 1.5px solid #555;
   border-radius: 6px;
-  background-color: #2e2e2e;  /* same as login-container */
-  color: white;               /* white input text */
+  background-color: #2e2e2e;  
+  color: white;              
   font-size: 15px;
   transition: border-color 0.3s ease;
 }
@@ -106,14 +106,14 @@ input:focus {
 }
 
 .links a,
-.signup a {
+.toggle-msg a { 
   color: #2da4db;
   text-decoration: none;
 }
 
 a,
 a:visited {
-  color:#2da4db;
+  color:#2da4db; 
   text-decoration: none;
 }
 
@@ -122,11 +122,10 @@ a:hover{
 }
 
 .links a:hover,
-.signup a:hover {
+.toggle-msg a:hover { 
   text-decoration: underline;
 }
 
-/* Button styling */
 button {
   width: 100%;
   margin-top: 35px;
@@ -154,15 +153,13 @@ button:active {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Signup prompt */
-.signup {
-  margin-top: 15px;
+.toggle-msg { 
   font-size: 14px;
   text-align: center;
   color: #cccccc;
 }
 
-/* Footer */
+
 .footer {
   width: 100%;
   text-align: center;
@@ -171,23 +168,29 @@ button:active {
   margin-top: 30px;
 }
 
-/* Responsive design */
 @media (max-width: 480px) {
   .login-container {
     padding: 35px 25px;
     border-radius: 8px;
+    height: auto; 
+    max-height: 90vh; 
+    overflow-y: auto; 
   }
 
   button {
     font-size: 15px;
   }
-}
 
-.links a,
-.signup a,
-.links a:visited,
-.signup a:visited {
-  color: #2da4db;
-  text-decoration: none;
+  .title-header {
+    margin-bottom: 10px;
+  }
 
+  .main-title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
