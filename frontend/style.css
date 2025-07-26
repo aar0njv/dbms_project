@@ -193,4 +193,12 @@ button:active {
     font-size: 14px;
     margin-top: 10px;
   }
+  /* Error message styling */
+.error-message {
+  color: #FF4D4D;
+  font-size: 13px;
+  display: none;
+  margin-top: 5px;
+}
+
 }
