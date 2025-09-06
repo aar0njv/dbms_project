@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #3a3a3a;
+  color: #dcdfe4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.auth-container h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: #f2f2f2;
+}
+
+.auth-container h1::after {
+  content: "";
+  display: block;
+  margin: 6px auto 0;
+  width: 40px;
+  height: 3px;
+  background-color: #FF9900; 
+  border-radius: 2px;  
+}
+
+.auth-container .subtitle {
+  color: #a0a0a0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.auth-card {
+  background-color: #2e2e2e;
+  padding: 50px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  height: 400px; 
+  color: white;
+}
+
+.auth-card .title {
+  font-weight: bold;
+  font-size: 2.0rem;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex;
+  
+}
+
+.auth-card p {
+  color: #a0a0a0;
+  margin-top: 0;
+  font-weight: bold;
+  display: flex;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.auth-card input {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #2e2e2e;
+  border: 1.5px solid #555;
+  border-radius: 6px;
+  color: #dcdfe4;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.auth-card input:focus{
+  border-color: #FF9900;
+  outline: none;
+}
+
+.auth-card input::placeholder {
+  color: #8e9297;
+}
+
+.auth-card a {
+  color: #00bfff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.auth-card a:hover {
+  text-decoration: underline;
+}
+
+.auth-card button {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.auth-card button:hover {
+  background-color: #e58800;
+}
+
+.auth-card .signup-text,
+.auth-card .login-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.auth-container .copyright {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #8e9297;
+}

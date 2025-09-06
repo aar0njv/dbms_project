@@ -1,0 +1,17 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #3a3a3a;
+}
+
+.App {
+    width: 100%;
+    overflow-x: hidden;
+}
