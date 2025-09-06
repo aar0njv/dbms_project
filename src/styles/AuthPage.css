@@ -48,9 +48,7 @@ body {
   padding: 50px 40px;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 450px;
-  height: 400px; 
+  width: 450px;
   color: white;
 }
 
@@ -78,8 +76,8 @@ body {
 }
 
 .auth-card input {
+  align-items: center;
   width: 100%;
-  max-width: 300px;
   padding: 12px;
   margin-top: 5px;
   margin-bottom: 5px;
