@@ -1,14 +1,4 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #3a3a3a;
-  color: #dcdfe4;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+
 
 .auth-container {
   display: flex;
@@ -16,6 +6,9 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  justify-content: center;
+  height: 100vh;
+  
 }
 
 .auth-container h1 {
