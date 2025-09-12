@@ -143,3 +143,70 @@ body {
   color: #ccc;
 }
 
+/* Subject Attendance Styles */
+.subject-attendance-container {
+  /* This class is already covered by .dashboard-card */
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px;
+}
+
+.subject-box {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subject-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #FF9900;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.attendance-percentage {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.attendance-fraction {
+  font-size: 0.9em;
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.attendance-status {
+  font-size: 0.9em;
+  font-style: italic;
+  color: #f7c948;
+}
+
+/* Base Card and Title Styles */
+/* These are the same as before, just included for context */
+.dashboard-card {
+  background-color: #2e2e2e;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.card-title {
+  color: #f7c948;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 22px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+

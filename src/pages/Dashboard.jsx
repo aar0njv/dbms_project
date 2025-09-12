@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header.jsx';
 import Timetable from '../components/Timetable';
+import SubjectAttendance from '../components/SubjectAttendance';
 import '../styles/Dashboard.css'
 
 
@@ -9,6 +10,7 @@ const Dashboard = () => {
     <div>
       <Header />
       <Timetable />
+      <SubjectAttendance />
     </div>
   );
 };
