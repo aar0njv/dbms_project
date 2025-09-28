@@ -305,10 +305,10 @@ body {
   background-color: #e58800;
 }
 
-
+/* Add any new base styles if needed */
 .dashboard-main {
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1200px; /* Adjust as needed */
   margin: auto;
 }
 
