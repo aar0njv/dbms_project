@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header.jsx';
 import Timetable from '../components/Timetable';
 import SubjectAttendance from '../components/SubjectAttendance';
+import AttendanceUpdation from '../components/AttendanceUpdation.jsx';
 import '../styles/Dashboard.css'
 
 
@@ -11,6 +12,7 @@ const Dashboard = () => {
       <Header />
       <Timetable />
       <SubjectAttendance />
+      <AttendanceUpdation />
     </div>
   );
 };

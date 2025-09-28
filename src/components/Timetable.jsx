@@ -1,12 +1,13 @@
 import React from 'react';
+import '../styles/Dashboard.css';
 
 const Timetable = () => {
   const timetableData = [
-    { day: 'Monday', classes: ['Data Structures', 'Operating Systems', 'Engineering Physics', 'Digital Electronics', 'Soft Skills', 'Compiler Design'] },
-    { day: 'Tuesday', classes: ['Soft Skills', 'Engineering Physics', 'Operating Systems', 'Data Structures', 'Compiler Design', 'Digital Electronics'] },
-    { day: 'Wednesday', classes: ['Compiler Design', 'Soft Skills', 'Engineering Physics', 'Operating Systems', 'Data Structures', 'Digital Electronics'] },
-    { day: 'Thursday', classes: ['Digital Electronics', 'Compiler Design', 'Soft Skills', 'Engineering Physics', 'Operating Systems', 'Data Structures'] },
-    { day: 'Friday', classes: ['Digital Electronics', 'Compiler Design', 'Data Structures', 'Operating Systems', 'Engineering Physics', 'Soft Skills'] },
+    { day: 'Monday', classes: ['Data Structures', 'Operating Systems', 'Logic System Design', 'Computer Networks', 'Professional Ethics', 'Web Development'] },
+    { day: 'Tuesday', classes: ['Data Structures', 'Soft Skills', 'Operating Systems', 'Cloud Computing', 'Computer Networks', 'Professional Ethics'] },
+    { day: 'Wednesday', classes: ['Logic System Design', 'Web Development', 'Cloud Computing', 'Data Structures', 'Operating Systems', 'Soft Skills'] },
+    { day: 'Thursday', classes: ['Computer Networks', 'Operating Systems', 'Professional Ethics', 'Data Structures', 'Logic System Design', 'Cloud Computing'] },
+    { day: 'Friday', classes: ['Web Development', 'Logic System Design', 'Soft Skills', 'Professional Ethics', 'Cloud Computing', 'Data Structures'] },
   ];
 
   return (
