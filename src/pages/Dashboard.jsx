@@ -32,17 +32,18 @@ const Dashboard = () => {
   };
 
   const handleTargetChange = (e) => {
-    setTargetPercentage(e.target.value);
+    setTargetPercentage(parseInt(e.target.value));
   };
 
   return (
     <div>
       <Header onTargetChange={handleTargetChange} />
-      <Timetable />
-      <SubjectAttendance userId={session.user.id} attendanceChanged={attendanceChanged} targetPercentage={targetPercentage} />
-      <AttendanceUpdation userId={session.user.id} onAttendanceSaved={handleAttendanceChange} />
+      <div className="dashboard-main">
+        <Timetable />
+        <SubjectAttendance userId={session.user.id} attendanceChanged={attendanceChanged} targetPercentage={targetPercentage} />
+        <AttendanceUpdation userId={session.user.id} onAttendanceSaved={handleAttendanceChange} />
+      </div>
     </div>
-  
   );
 };
 

@@ -1,14 +1,30 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '../supabaseClient';
 
-const Header = () => {
+const Header = ({ onTargetChange }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    if (error) {
+      alert('Error logging out: ' + error.message);
+    } else {
+      navigate('/');
+    }
+  };
   return (
     <>
       <div className="top-status-bar">
         <div className="left-logo">EzyGo+</div>
         <div className="right-controls">
-          <select id="attendance-threshold">
+          <select 
+            id="attendance-threshold" 
+            onChange={onTargetChange}
+            defaultValue="75"
+          >
             <option value="70">70%</option>
-            <option value="75" selected>75%</option>
+            <option value="75">75%</option>
             <option value="80">80%</option>
             <option value="85">85%</option>
             <option value="90">90%</option>
@@ -20,7 +36,13 @@ const Header = () => {
               <circle cx="12" cy="7" r="4" />
             </svg>
           </div>
-          <button id="logout-button" className="dashboard-button">Logout</button>
+          <button 
+            id="logout-button" 
+            className="dashboard-button" 
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
         </div>
       </div>
       <header className="dashboard-header">
