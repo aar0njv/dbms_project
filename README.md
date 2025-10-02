@@ -1,12 +1,26 @@
-# React + Vite
+# Ezygo+ : Smart Attendance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ezygo+** is a web-based attendance tracking and analysis platform designed specifically for students under the KTU (APJ Abdul Kalam Technological University) curriculum. It provides students with a dynamic, personalized dashboard to monitor their subject-wise attendance in real-time, helping them stay informed about their academic eligibility and status.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Core Features
 
-## Expanding the ESLint configuration
+* **Dynamic Dashboard:** Personalized display showing subject-wise attendance statistics upon login.
+* **Target Comparison:** Calculates the exact number of classes a student needs to **attend** or can **bunk** to meet a user-defined target percentage (e.g., 75%, 80%).
+* **Interactive Updation:** Simple interface allowing students to select a subject and save their daily attendance records to the database.
+* **Real-Time Reflection:** Changes saved in the updation component are immediately reflected in the attendance summary without needing a page refresh.
+* **Secure Authentication:** User session management via Supabase ensures each student can only view and manage their own data.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+##  Tech Stack
+
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend** | **React.js (Vite)** | The core UI framework for building the single-page application. |
+| **Backend/DB** | **Supabase** | Provides a PostgreSQL database, secure password hashing, and real-time API. |
+| **Styling** | **CSS3** | Custom styling for a modern, dark-themed user interface. |
+| **Routing** | **React Router DOM** | Handles seamless navigation between the Auth page and the Dashboard. |
+
+---
