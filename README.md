@@ -1,6 +1,6 @@
 # Ezygo+ : Smart Attendance Dashboard
 
-**Ezygo+** is a web-based attendance tracking and analysis platform designed specifically for students under the KTU (APJ Abdul Kalam Technological University) curriculum. It provides students with a dynamic, personalized dashboard to monitor their subject-wise attendance in real-time, helping them stay informed about their academic eligibility and status.
+**Ezygo+** is a web-based attendance tracking and analysis platform designed specifically for students. It provides students with a dynamic, personalized dashboard to monitor their subject-wise attendance in real-time, helping them stay informed about their academic eligibility and status.
 
 ---
 
