@@ -25,7 +25,7 @@ const Timetable = () => {
           <React.Fragment key={periodIndex}>
             <div className="timetable-time-cell">Period {periodIndex + 1}</div>
             {timetableData.map(day => (
-              <div key={day.day} className="timetable-subject-cell">
+              <div key={day.day} className="timetable-subject-cell" data-day={day.day}>
                 <span className="subject-name">{day.classes[periodIndex]}</span>
               </div>
             ))}

@@ -333,3 +333,158 @@ body {
   margin: auto;
 }
 
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .top-status-bar {
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  
+  .left-logo {
+    font-size: 18px;
+    order: 1;
+  }
+  
+  .right-controls {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    order: 2;
+  }
+  
+  .college-label {
+    display: none; /* Hide college name on mobile to save space */
+  }
+  
+  .right-controls select {
+    padding: 6px 10px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+  
+  .dashboard-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .profile-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .dashboard-header {
+    padding: 20px 15px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 22px;
+  }
+  
+  .dashboard-header p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  .dashboard-card {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  /* Timetable Mobile Styles */
+  .timetable-grid {
+    display: block;
+    font-size: 0.8em;
+  }
+  
+  .timetable-header-cell {
+    display: none;
+  }
+  
+  .timetable-time-cell,
+  .timetable-subject-cell {
+    display: block;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #444;
+    text-align: left;
+  }
+  
+  .timetable-time-cell {
+    background-color: #3a3a3a;
+    font-weight: bold;
+    color: #FF9900;
+    border-bottom: 2px solid #FF9900;
+  }
+  
+  .timetable-subject-cell {
+    background-color: #2e2e2e;
+    padding-left: 20px;
+  }
+  
+  .timetable-subject-cell:before {
+    content: attr(data-day) ": ";
+    font-weight: bold;
+    color: #FF9900;
+  }
+  
+  /* Subject Attendance Mobile Styles */
+  .subjects-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+  }
+  
+  .subject-box {
+    padding: 15px;
+  }
+  
+  .subject-title {
+    font-size: 1em;
+  }
+  
+  .attendance-percentage {
+    font-size: 1.5em;
+  }
+  
+  /* Attendance Updation Mobile Styles */
+  .updation-controls {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  .button-group {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .updation-button {
+    flex: 1;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 10px;
+  }
+  
+  .dashboard-card {
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  .timetable-time-cell,
+  .timetable-subject-cell {
+    padding: 8px;
+  }
+  
+  .subject-name {
+    font-size: 0.9em;
+  }
+}
+
