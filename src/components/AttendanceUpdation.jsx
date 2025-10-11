@@ -68,7 +68,7 @@ const AttendanceUpdation = ({ userId, onAttendanceSaved }) => {
         date: today,
         is_present: true
       }]);
-      alert('Attendance marked successfully!');
+      
     }
     setLoading(false);
   };
@@ -117,7 +117,7 @@ const AttendanceUpdation = ({ userId, onAttendanceSaved }) => {
         date: today,
         is_present: false
       }]);
-      alert('Absence marked successfully!');
+
     }
     setLoading(false);
   };
