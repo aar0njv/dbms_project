@@ -118,7 +118,7 @@ body {
 
 .timetable-grid {
   display: grid;
-  grid-template-columns: 80px repeat(5, 1fr);
+  grid-template-columns: 100px repeat(6, 1fr);
   border: 1px solid #444;
   border-radius: 8px;
   overflow: hidden;
@@ -426,11 +426,6 @@ body {
     padding-left: 20px;
   }
   
-  .timetable-subject-cell:before {
-    content: attr(data-day) ": ";
-    font-weight: bold;
-    color: #FF9900;
-  }
   
   /* Subject Attendance Mobile Styles */
   .subjects-grid {

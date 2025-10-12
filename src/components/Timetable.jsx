@@ -14,19 +14,22 @@ const Timetable = () => {
     <section className="dashboard-card timetable-card">
       <h2 className="card-title">Weekly Timetable</h2>
       <div className="timetable-grid">
-        <div className="timetable-header-cell">Time</div>
-        <div className="timetable-header-cell">Monday</div>
-        <div className="timetable-header-cell">Tuesday</div>
-        <div className="timetable-header-cell">Wednesday</div>
-        <div className="timetable-header-cell">Thursday</div>
-        <div className="timetable-header-cell">Friday</div>
+        {/* Header row: Day | Period 1 | Period 2 | Period 3 | Period 4 | Period 5 | Period 6 */}
+        <div className="timetable-header-cell">Day</div>
+        <div className="timetable-header-cell">Period 1</div>
+        <div className="timetable-header-cell">Period 2</div>
+        <div className="timetable-header-cell">Period 3</div>
+        <div className="timetable-header-cell">Period 4</div>
+        <div className="timetable-header-cell">Period 5</div>
+        <div className="timetable-header-cell">Period 6</div>
 
-        {[...Array(6)].map((_, periodIndex) => (
-          <React.Fragment key={periodIndex}>
-            <div className="timetable-time-cell">Period {periodIndex + 1}</div>
-            {timetableData.map(day => (
-              <div key={day.day} className="timetable-subject-cell" data-day={day.day}>
-                <span className="subject-name">{day.classes[periodIndex]}</span>
+        {/* Data rows: Each day as a row with its subjects in period columns */}
+        {timetableData.map(day => (
+          <React.Fragment key={day.day}>
+            <div className="timetable-time-cell">{day.day}</div>
+            {day.classes.map((subject, periodIndex) => (
+              <div key={periodIndex} className="timetable-subject-cell">
+                <span className="subject-name">{subject}</span>
               </div>
             ))}
           </React.Fragment>
