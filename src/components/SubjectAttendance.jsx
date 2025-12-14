@@ -35,7 +35,9 @@ const SubjectAttendance = ({ userId, attendanceChanged, targetPercentage }) => {
                 totalClasses: 0,
                 attendedClasses: 0,
                 percentage: 0,
-                status: 'No data'
+                status: 'No data',
+                classesNeeded: 0,
+                classesCanSkip: 0
               };
             }
 
@@ -43,10 +45,28 @@ const SubjectAttendance = ({ userId, attendanceChanged, targetPercentage }) => {
             const attendedClasses = attendanceData.filter(record => record.is_present === true).length;
             const percentage = totalClasses > 0 ? Math.round((attendedClasses / totalClasses) * 100) : 0;
             
+            // Calculate classes needed to meet target
+            let classesNeeded = 0;
+            if (percentage < targetPercentage && totalClasses > 0) {
+              classesNeeded = Math.ceil((targetPercentage * totalClasses - attendedClasses * 100) / (100 - targetPercentage));
+            }
+            
+            // Calculate classes that can be skipped while maintaining target
+            let classesCanSkip = 0;
+            if (percentage >= targetPercentage && totalClasses > 0) {
+              // Calculate maximum absences allowed while maintaining target
+              const maxAbsencesAllowed = Math.floor(attendedClasses * (100 - targetPercentage) / targetPercentage);
+              const currentAbsences = totalClasses - attendedClasses;
+              classesCanSkip = maxAbsencesAllowed - currentAbsences;
+              // Ensure we don't show negative values
+              classesCanSkip = Math.max(0, classesCanSkip);
+            }
+
             let status = 'Good';
             if (percentage < targetPercentage) {
-              const classesNeeded = Math.ceil((targetPercentage * totalClasses - attendedClasses * 100) / (100 - targetPercentage));
               status = classesNeeded > 0 ? `Need ${classesNeeded} more classes` : 'At Risk';
+            } else if (classesCanSkip > 0) {
+              status = `Can skip ${classesCanSkip} classes`;
             }
 
             return {
@@ -54,7 +74,9 @@ const SubjectAttendance = ({ userId, attendanceChanged, targetPercentage }) => {
               totalClasses,
               attendedClasses,
               percentage,
-              status
+              status,
+              classesNeeded,
+              classesCanSkip
             };
           })
         );
@@ -105,7 +127,8 @@ const SubjectAttendance = ({ userId, attendanceChanged, targetPercentage }) => {
             </p>
             <p className="attendance-status" style={{
               color: subject.status === 'Good' ? '#4CAF50' : 
-                     subject.status.includes('Need') ? '#FF9900' : '#f44336'
+                     subject.status.includes('Need') ? '#FF9900' : 
+                     subject.status.includes('skip') ? '#4CAF50' : '#f44336'
             }}>
               {subject.status}
             </p>
