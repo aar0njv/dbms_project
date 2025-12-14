@@ -1,0 +1,130 @@
+/* Shared Professional Styling Variables */
+
+:root {
+  /* Colors */
+  --primary-bg: #1a1a2e;
+  --secondary-bg: #16213e;
+  --card-bg: #2d2d44;
+  --card-bg-secondary: #2a2a3d;
+  --input-bg: #252536;
+  --border-color: #3d3d5c;
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0c0;
+  --text-tertiary: #7a7a9a;
+  --accent-color: #ff9900;
+  --accent-hover: #ffaa33;
+  --success-color: #4CAF50;
+  --error-color: #f44336;
+  
+  /* Typography */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 25px;
+  --spacing-xxl: 30px;
+  
+  /* Borders & Shadows */
+  --border-radius-sm: 8px;
+  --border-radius-md: 10px;
+  --border-radius-lg: 12px;
+  --box-shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.15);
+  --box-shadow-md: 0 10px 25px rgba(0, 0, 0, 0.2);
+  --box-shadow-lg: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Common Component Styles */
+
+/* Buttons */
+.professional-button {
+  background: linear-gradient(90deg, var(--accent-color) 0%, #ff6a00 100%);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(255, 153, 0, 0.2);
+}
+
+.professional-button:hover {
+  background: linear-gradient(90deg, var(--accent-hover) 0%, #ff7b22 100%);
+  box-shadow: 0 6px 15px rgba(255, 153, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.professional-button:active {
+  transform: translateY(0);
+}
+
+/* Cards */
+.professional-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 25px;
+  box-shadow: var(--box-shadow-md);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+/* Inputs */
+.professional-input {
+  padding: 14px 16px;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-primary);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.professional-input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
+
+/* Selects */
+.professional-select {
+  padding: 12px 15px;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.professional-select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
