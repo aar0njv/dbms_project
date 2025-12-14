@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthPage from './pages/AuthPage';
 import Dashboard from './pages/Dashboard'
 import './styles/App.css';
+import './styles/shared.css';
 
 function App() {
   return (

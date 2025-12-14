@@ -1,136 +1,174 @@
-/* Top Header Bar*/
-
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #3a3a3a;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #ffffff;
+  min-height: 100vh;
 }
 
+/* Top Header Bar */
 .top-status-bar {
-  background-color: #232f3e;
-  padding: 10px 20px;
+  background: #2d2d44;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #3d3d5c;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .left-logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #FF9900;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
 }
 
 .right-controls {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 5px; 
 }
 
 .right-controls select {
-  padding: 8px 12px; 
-  border-radius: 5px;
-  background-color: #2e2e2e;
-  color: white;
-  border: 1px solid #555;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #252536;
+  color: #e0e0ff;
+  border: 1px solid #3d3d5c;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.right-controls select:focus {
+  border-color: #ff9900;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
 }
 
 .profile-icon {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  border: 2px solid #FF9900;
-  background-color: #555; 
+  border: 2px solid #ff9900;
+  background: linear-gradient(135deg, #2d2d44 0%, #252536 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 153, 0, 0.3);
 }
 
 .dashboard-button {
-  background-color: #FF9900;
-  color: #111;
+  background: linear-gradient(90deg, #ff9900 0%, #ff6a00 100%);
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 8px 15px;
-  font-size: 14px;
-  font-weight: bold;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(255, 153, 0, 0.2);
 }
 
 .dashboard-button:hover {
-  background-color: #e58800;
+  background: linear-gradient(90deg, #ffaa33 0%, #ff7b22 100%);
+  box-shadow: 0 6px 15px rgba(255, 153, 0, 0.3);
+  transform: translateY(-2px);
 }
 
+.dashboard-button:active {
+  transform: translateY(0);
+}
 
 .dashboard-header {
   text-align: center;
-  padding: 30px 0;
-  background-color: #1f2a38;
+  padding: 40px 0 30px;
+  background: rgba(45, 45, 68, 0.6);
   max-width: 100%;
-  
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #3d3d5c;
 }
 
 .dashboard-header h1 {
   margin: 0;
-  font-size: 28px;
-  color: #FF9900;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .dashboard-header p {
-  margin-top: 10px;
-  color: #cccccc;
+  margin-top: 12px;
+  color: #b0b0c0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.dashboard-main {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .dashboard-card {
-  background-color: #2e2e2e;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: #2d2d44;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   color: #fff;
+  border: 1px solid #3d3d5c;
+  backdrop-filter: blur(10px);
 }
 
 .card-title {
-  color: #f7c948;
+  color: #ffffff;
   margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 22px;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #3d3d5c;
+  letter-spacing: 0.5px;
 }
 
 /* Timetable Grid Styles */
-
 .timetable-grid {
   display: grid;
-  grid-template-columns: 100px repeat(6, 1fr);
-  border: 1px solid #444;
-  border-radius: 8px;
+  grid-template-columns: 120px repeat(6, 1fr);
+  border: 1px solid #3d3d5c;
+  border-radius: 10px;
   overflow: hidden;
-  font-size: 0.9em;
+  font-size: 0.95em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .timetable-header-cell {
-  background-color: #3a3a3a;
-  font-weight: bold;
-  padding: 12px 8px;
+  background: #252536;
+  font-weight: 600;
+  padding: 15px 10px;
   text-align: center;
-  border-right: 1px solid #444;
+  border-right: 1px solid #3d3d5c;
+  color: #e0e0ff;
 }
 
 .timetable-header-cell:last-child {
@@ -139,9 +177,9 @@ body {
 
 .timetable-time-cell,
 .timetable-subject-cell {
-  padding: 15px 8px;
-  border-top: 1px solid #444;
-  border-right: 1px solid #444;
+  padding: 18px 10px;
+  border-top: 1px solid #3d3d5c;
+  border-right: 1px solid #3d3d5c;
   text-align: center;
 }
 
@@ -150,96 +188,79 @@ body {
 }
 
 .timetable-time-cell {
-  font-weight: bold;
-  color: #FF9900;
-  background-color: #252525;
+  font-weight: 600;
+  color: #ff9900;
+  background: #2a2a3d;
 }
 
 .subject-name {
-  color: #ccc;
+  color: #d0d0e0;
+  font-weight: 500;
 }
 
 /* Subject Attendance Styles */
-.subject-attendance-container {
-  /* This class is already covered by .dashboard-card */
-}
-
 .subjects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
 }
 
 .subject-box {
-  background-color: #3a3a3a;
-  padding: 20px;
+  background: #2a2a3d;
+  padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-align: center;
+  border: 1px solid #3d3d5c;
+  transition: all 0.3s ease;
+}
+
+.subject-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .subject-title {
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #FF9900;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ffffff;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .attendance-percentage {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 2.2em;
+  font-weight: 700;
   margin-top: 0;
   margin-bottom: 5px;
+  color: #ff9900;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .attendance-fraction {
-  font-size: 0.9em;
-  color: #ccc;
+  font-size: 1em;
+  color: #b0b0c0;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .attendance-status {
-  font-size: 0.9em;
-  font-style: italic;
-  color: #f7c948;
-}
-
-/* Base Card and Title Styles */
-/* These are the same as before, just included for context */
-.dashboard-card {
-  background-color: #2e2e2e;
-  padding: 25px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
-
-.card-title {
-  color: #f7c948;
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 22px;
-  border-bottom: 1px solid #444;
-  padding-bottom: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #d0d0e0;
 }
 
 /* Attendance Updation Styles */
-.attendance-updation-card {
-  /* Inherits styles from .dashboard-card */
-}
-
 .updation-info {
-  color: #ccc;
-  margin-top: -10px;
-  margin-bottom: 20px;
+  color: #b0b0c0;
+  margin-top: -5px;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
 }
 
 .updation-controls {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -247,158 +268,174 @@ body {
 
 .subject-select {
   flex-grow: 1;
-  padding: 12px;
-  border-radius: 6px;
-  background-color: #3a3a3a;
-  color: white;
-  border: 1px solid #555;
+  padding: 14px 18px;
+  border-radius: 8px;
+  background-color: #252536;
+  color: #e0e0ff;
+  border: 1px solid #3d3d5c;
   cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.subject-select:focus {
+  border-color: #ff9900;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
 }
 
 .button-group {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .updation-button {
-  padding: 10px 15px;
+  padding: 12px 20px;
   border: none;
-  border-radius: 4px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .add-button {
-  background-color: #4CAF50; /* Green color */
+  background: linear-gradient(90deg, #4CAF50 0%, #45a049 100%);
   color: white;
 }
 
 .add-button:hover {
-  background-color: #45a049;
+  background: linear-gradient(90deg, #5cb65f 0%, #55b059 100%);
+  box-shadow: 0 6px 15px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
 }
 
 .delete-button {
-  background-color: #f44336; /* Red color */
+  background: linear-gradient(90deg, #f44336 0%, #da190b 100%);
   color: white;
 }
 
 .delete-button:hover {
-  background-color: #da190b;
-}
-
-.updation-button absent-button {
-  background-color: #ff6b6b;
-  border-color: #ff6b6b;
+  background: linear-gradient(90deg, #ff5c4f 0%, #eb2a1f 100%);
+  box-shadow: 0 6px 15px rgba(244, 67, 54, 0.3);
+  transform: translateY(-2px);
 }
 
 .attendance-log-container {
-  background-color: #3a3a3a;
-  border: 1px solid #444;
-  border-radius: 8px;
-  min-height: 100px;
-  margin-top: 20px;
-  padding: 15px;
+  background: #2a2a3d;
+  border: 1px solid #3d3d5c;
+  border-radius: 10px;
+  min-height: 120px;
+  margin-top: 25px;
+  padding: 20px;
   overflow-y: auto;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .log-placeholder {
-  color: #888;
+  color: #7a7a9a;
   font-style: italic;
   text-align: center;
-  padding-top: 25px;
+  padding-top: 30px;
+  font-size: 1.1rem;
 }
 
 .save-button {
   width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background-color: #FF9900;
-  color: #111;
-  font-weight: bold;
+  padding: 15px;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #ff9900 0%, #ff6a00 100%);
+  color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(255, 153, 0, 0.2);
 }
 
 .save-button:hover {
-  background-color: #e58800;
+  background: linear-gradient(90deg, #ffaa33 0%, #ff7b22 100%);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3);
+  transform: translateY(-2px);
 }
 
-/* Add any new base styles if needed */
-.dashboard-main {
-  padding: 20px;
-  max-width: 1200px; /* Adjust as needed */
-  margin: auto;
+.save-button:active {
+  transform: translateY(0);
 }
 
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   .top-status-bar {
     flex-direction: column;
-    padding: 10px 15px;
-    gap: 10px;
+    padding: 15px 20px;
+    gap: 15px;
   }
   
   .left-logo {
-    font-size: 18px;
+    font-size: 20px;
     order: 1;
   }
   
   .right-controls {
     width: 100%;
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
     order: 2;
   }
   
   .college-label {
-    display: none; /* Hide college name on mobile to save space */
+    display: none;
   }
   
   .right-controls select {
-    padding: 6px 10px;
-    font-size: 12px;
-    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 14px;
   }
   
   .dashboard-button {
-    padding: 6px 12px;
-    font-size: 12px;
+    padding: 8px 15px;
+    font-size: 14px;
   }
   
   .profile-icon {
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
   }
   
   .dashboard-header {
-    padding: 20px 15px;
+    padding: 25px 20px;
   }
   
   .dashboard-header h1 {
-    font-size: 22px;
+    font-size: 26px;
   }
   
   .dashboard-header p {
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+  
+  .dashboard-main {
+    padding: 20px 15px;
   }
   
   .dashboard-card {
-    padding: 15px;
-    margin: 10px;
+    padding: 20px;
+    margin: 15px;
   }
   
   .card-title {
-    font-size: 18px;
+    font-size: 20px;
   }
   
   /* Timetable Mobile Styles */
   .timetable-grid {
     display: block;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   
   .timetable-header-cell {
@@ -408,47 +445,46 @@ body {
   .timetable-time-cell,
   .timetable-subject-cell {
     display: block;
-    padding: 10px;
+    padding: 15px;
     border: none;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #3d3d5c;
     text-align: left;
   }
   
   .timetable-time-cell {
-    background-color: #3a3a3a;
-    font-weight: bold;
-    color: #FF9900;
-    border-bottom: 2px solid #FF9900;
+    background: #252536;
+    font-weight: 600;
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900;
   }
   
   .timetable-subject-cell {
-    background-color: #2e2e2e;
-    padding-left: 20px;
+    background: #2d2d44;
+    padding-left: 25px;
   }
-  
   
   /* Subject Attendance Mobile Styles */
   .subjects-grid {
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 15px;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .subject-box {
-    padding: 15px;
+    padding: 20px;
   }
   
   .subject-title {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   
   .attendance-percentage {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   
   /* Attendance Updation Mobile Styles */
   .updation-controls {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     align-items: stretch;
   }
   
@@ -459,27 +495,26 @@ body {
   
   .updation-button {
     flex: 1;
-    min-width: 80px;
+    min-width: 90px;
   }
 }
 
 @media (max-width: 480px) {
   .dashboard-main {
-    padding: 10px;
+    padding: 15px;
   }
   
   .dashboard-card {
-    padding: 10px;
-    margin: 5px;
+    padding: 15px;
+    margin: 10px;
   }
   
   .timetable-time-cell,
   .timetable-subject-cell {
-    padding: 8px;
+    padding: 12px;
   }
   
   .subject-name {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 }
-
